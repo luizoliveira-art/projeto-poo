@@ -1,0 +1,42 @@
+class Pessoa:
+  def __init__(self, cpf, nome, idade):
+    self.cpf = float(cpf)
+    self.nome = str(nome)
+    self.idade = int(idade)
+
+  def apresentar(self):
+    print(f'\nMeu nome é {self.nome}')
+    print(f'tenho {self.idade} anos')
+    print(f'meu cpf é {self.cpf}')
+
+
+class Aluno(Pessoa):
+  def __init__(self, cpf, nome, idade, matricula):
+    super().__init__(cpf, nome, idade)
+    self.matricula = int(matricula)
+
+  def apresentar(self):
+    super().apresentar()
+    print(f'Minha matrícula é {self.matricula}\n')
+
+class Oferta:
+  def __init__(self, nome, duracao, nivel):
+    self.nome = str(nome) #nome do curso
+    self.duracao = int(duracao)
+    self.nivel = str(nivel) #se o curso é nível tecnico, superior, licenciatura ou bacharelado
+
+  def apresentar(self):
+    print(f'O curso é {self.nome}')
+    print(f'A duração do curso é {self.duracao} meses')
+    print(f'O nível do curso é {self.nivel}')
+
+
+p1 = Pessoa(123456.7, 'João', 20)
+p1.apresentar()
+
+
+a1 = Aluno(654321, 'Maria', 22, 1001)
+a1.apresentar()
+
+o1 = Oferta('ADS', 38, 'Tecnólogo')
+o1.apresentar()
