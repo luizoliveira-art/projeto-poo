@@ -1,0 +1,5 @@
+Oferta
+Pessoa
+Aluno(Pessoa)
+Turma(Oferta)
+Curso
