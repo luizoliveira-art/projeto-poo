@@ -1,0 +1,13 @@
+from Pessoa import *
+from Aluno import *
+from Oferta import *
+
+p1 = Pessoa(123456.7, 'João', 20)
+p1.apresentar()
+
+
+a1 = Aluno(654321, 'Maria', 22, 1001)
+a1.apresentar()
+
+o1 = Oferta('ADS', 38, 'Tecnólogo')
+o1.apresentar()
